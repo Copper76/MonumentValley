@@ -5,9 +5,8 @@ using UnityEngine;
 public class RotateMover : Movable
 {
     public Vector3 rotateAxis;//Z-Axis needs to be inverse
-    public Vector2 pivot;
-
-    public int[] orientations;
+    public Vector3[] moveAnchors;
+    public Vector3 pivot;
 
     public override void OnStartMove(Vector2 mousePosition)
     {
@@ -17,32 +16,35 @@ public class RotateMover : Movable
     }
     public override void OnMove(Vector2 mousePosition)
     {
+        if(CanNotMove())
+        {
+            return;
+        }
         float changeAmount = 0.0f;
         changeAmount += (mousePosition.x - mousePos.x);
         changeAmount += (mousePosition.y - mousePos.y);
-        transform.Rotate(changeAmount * 0.5f * rotateAxis);
+        transform.Rotate(rotateAxis, changeAmount);
         mousePos = mousePosition;
     }
 
-    public override bool OnCompleteMove()
+    public override void OnCompleteMove()
     {
-        float minDist = Mathf.Infinity;
+        float minAngle = Mathf.Infinity;
         int closestAnchor = 0;
-        Vector3 eulerAngle = transform.eulerAngles;
         for(int i = 0; i< moveAnchors.Length;i++)
         {
-            float dist = Vector3.Distance(eulerAngle, moveAnchors[i]);
-            if (dist < minDist)
+            float angle = Quaternion.Angle(transform.rotation, Quaternion.Euler(moveAnchors[i]));
+            if (angle < minAngle)
             {
-                minDist = dist;
+                minAngle = angle;
                 closestAnchor = i;
             }
         }
         closestAnchor %= moveAnchors.Length-1;//360 is the same as 0
-        GameManager.SetIdaOrientation(orientations[closestAnchor]);
-        transform.rotation = Quaternion.Euler(moveAnchors[closestAnchor]);
+        //GameManager.SetIdaOrientation(orientations[closestAnchor]);
+        transform.eulerAngles = moveAnchors[closestAnchor];
         anchorPoint = closestAnchor;
-        return base.OnCompleteMove();
+        base.OnCompleteMove();
     }
 
 }
