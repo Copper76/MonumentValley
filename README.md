@@ -15,6 +15,7 @@ This project is a demo project using Unity Engine.
 ## Controls
 - LEFT MOUSE BUTTON to click and drag movable cubes which are highlighted in yellow or clearly made
 - RIGHT MOUSE BUTTON to move Ida to a reachable location
+- ESCAPE to leave the game
 
 ## Tools
 - Unity 2022.1.15f1
