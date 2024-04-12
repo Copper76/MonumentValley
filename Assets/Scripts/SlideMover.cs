@@ -9,15 +9,9 @@ public class SlideMover : Movable
     public Vector3 minPos;
     public Vector3 maxPos;
     public Vector3[] moveAnchors;
-
-    public Movable[] LinkedMovables;
     public override void OnStartMove(Vector2 mousePosition)
     {
         base.OnStartMove(mousePosition);
-        foreach (Movable movable in LinkedMovables)
-        {
-            movable.OnStartMove(mousePosition);
-        }
     }
     public override void OnMove(Vector2 mousePosition)
     {
@@ -33,11 +27,6 @@ public class SlideMover : Movable
             Mathf.Clamp(transform.position.y + changeAmount.y, minPos.y, maxPos.y),
             Mathf.Clamp(transform.position.z + changeAmount.z, minPos.z, maxPos.z));
         mousePos = mousePosition;
-
-        foreach (Movable movable in LinkedMovables)
-        {
-            movable.OnMove(mousePosition);
-        }
     }
 
     public override void OnCompleteMove()
@@ -55,11 +44,6 @@ public class SlideMover : Movable
                 MakeConnections();
                 break;
             }
-        }
-
-        foreach (Movable movable in LinkedMovables)
-        {
-            movable.OnCompleteMove();
         }
     }
 }

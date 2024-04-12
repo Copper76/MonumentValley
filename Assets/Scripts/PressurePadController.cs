@@ -37,7 +37,10 @@ public class PressurePadController : MonoBehaviour
         inUse = true;
         if (isSingleUse)
         {
-            transform.GetChild(0).GetComponent<Renderer>().material = usedMaterial;
+            if (transform.childCount>0)
+            {
+                transform.GetChild(0).GetComponent<Renderer>().material = usedMaterial;
+            }
             Destroy(this);
             
         }

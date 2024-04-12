@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ForceRotation : MonoBehaviour
+{
+    public Walkable parent;
+    private void OnTriggerEnter(Collider other)
+    {
+        if ( other.tag == "Ida")
+        {
+            GameManager.SetIdaParent(parent);
+        }
+    }
+}

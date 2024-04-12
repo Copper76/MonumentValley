@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5564987156223769242}
   - component: {fileID: 5564987156223769243}
   - component: {fileID: 1169582587}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RotateController
   m_TagString: Move Controller
   m_Icon: {fileID: 0}
@@ -2855,7 +2855,7 @@ GameObject:
   - component: {fileID: 5564987156341884661}
   - component: {fileID: 5564987156341884662}
   - component: {fileID: 1019756114}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle
   m_TagString: Move Controller
   m_Icon: {fileID: 0}
@@ -5693,7 +5693,7 @@ GameObject:
   - component: {fileID: 5564987157877673950}
   - component: {fileID: 5564987157877673951}
   - component: {fileID: 756940666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle (1)
   m_TagString: Move Controller
   m_Icon: {fileID: 0}

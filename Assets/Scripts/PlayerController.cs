@@ -18,10 +18,12 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround;
     public bool canMove = true;
 
+    public Vector3 rotateCompensation = new Vector3();
+
     //Pathfinding
     public List<Walkable> finalPath = new List<Walkable>();
     public Walkable currentCube;
-    public Movable mover;
+    public MoveController mover;
 
     // Start is called before the first frame update
     void Start()
@@ -56,11 +58,8 @@ public class PlayerController : MonoBehaviour
                         WalkableContainer container = mouseHit.transform.GetComponent<WalkableContainer>();
                         if (container.GetValidWalkable())
                         {
-                            targetCube = container.GetValidWalkable();
-                            if (!CalculatePath())
-                            {
-                                targetCube = null;
-                            }
+                            Walkable potentialTarget = container.GetValidWalkable();
+                            CalculatePath(potentialTarget);
                             targetPos = transform.position;
                         }
                     }
@@ -77,7 +76,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (mouseHit.transform.tag == "Move Controller")
                 {
-                    mover = mouseHit.transform.GetComponent<MoveController>().mover;
+                    mover = mouseHit.transform.GetComponent<MoveController>();
                 }
                 if (mover != null)
                 {
@@ -149,6 +148,7 @@ public class PlayerController : MonoBehaviour
                 if (validWalkable != null)
                 {
                     isOnGround = true;
+                    //rotateCompensation = validWalkable.rotateCompensation;
 
                     if (currentCube == validWalkable)
                     {
@@ -161,6 +161,8 @@ public class PlayerController : MonoBehaviour
                     }
 
                     currentCube = validWalkable;
+
+                    //transform.localRotation = currentCube.transform.localRotation;
 
                     if (currentCube.GetComponent<WalkableContainer>().mover != null)
                     {
@@ -177,24 +179,23 @@ public class PlayerController : MonoBehaviour
         isOnGround = false;
     }
 
-    bool CalculatePath()
+    bool CalculatePath(Walkable target)
     {
-        finalPath.Clear();
         Stack<Walkable> nextCubes = new Stack<Walkable>();
         List<Walkable> pastCubes = new List<Walkable>();
 
         nextCubes.Push(currentCube);
 
-        if(ExploreCube(nextCubes, pastCubes))
+        if(ExploreCube(nextCubes, pastCubes, target))
         {
-            BuildPath();
+            BuildPath(target);
             return true;
         }
         return false;
     }
 
     //Check if a valid path is found
-    bool ExploreCube(Stack<Walkable> nextCubes, List<Walkable> pastCubes)
+    bool ExploreCube(Stack<Walkable> nextCubes, List<Walkable> pastCubes, Walkable target)
     {
         if (nextCubes.Count == 0)
         {
@@ -202,7 +203,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Walkable current = nextCubes.Pop();
-        if (current == targetCube)
+        if (current == target)
         {
             return true;
         }
@@ -218,12 +219,13 @@ public class PlayerController : MonoBehaviour
 
         pastCubes.Add(current);
 
-        return ExploreCube(nextCubes, pastCubes);
+        return ExploreCube(nextCubes, pastCubes, target);
     }
 
-    void BuildPath()
+    void BuildPath(Walkable target)
     {
-        Walkable cube = targetCube;
+        finalPath.Clear();
+        Walkable cube = target;
 
         while (cube != currentCube)
         {
@@ -273,6 +275,6 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, transform.position - transform.up);
+        Gizmos.DrawLine(transform.position, transform.position + transform.up);
     }
 }

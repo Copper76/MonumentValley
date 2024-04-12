@@ -19,7 +19,8 @@ public class WalkableContainer : MonoBehaviour
     {
         foreach (Walkable walkable in walkables)
         {
-            if (walkable.transform.rotation * walkable.pathDir == GameManager.GetIdaOrientation())
+            //Debug.Log(Quaternion.Euler(walkable.rotateCompensation) * walkable.transform.rotation * walkable.pathDir);
+            if (Quaternion.Euler(walkable.rotateCompensation) * walkable.transform.rotation * walkable.pathDir == GameManager.GetIdaOrientation())
             {
                 return walkable;
             }

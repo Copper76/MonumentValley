@@ -199,7 +199,6 @@ MonoBehaviour:
   - {x: 270, y: 0, z: 0}
   - {x: 360, y: 0, z: 0}
   pivot: {x: 0, y: 0, z: 0}
-  rotatePivot: {x: -5, y: -6, z: 5}
 --- !u!1 &76517160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4434252920686197544, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
@@ -380,70 +379,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5932077273521021787, guid: 57b47d8c735d8864daaa4c006ee10cbe, type: 3}
   m_PrefabInstance: {fileID: 113433711}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &127185280
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 262947529}
-    m_Modifications:
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202362373653521868, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-      propertyPath: m_Name
-      value: TopIllusion
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: e7018788c2dd32e459da387253651ae1, type: 3}
---- !u!4 &127185281 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
-  m_PrefabInstance: {fileID: 127185280}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &211374959 stripped
 GameObject:
@@ -706,9 +641,6 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7986173871030330830, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 127185281}
-    - targetCorrespondingSourceObject: {fileID: 7986173871030330830, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 941414711}
   m_SourcePrefab: {fileID: 100100000, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
 --- !u!4 &262947529 stripped
@@ -722,7 +654,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277092
+  m_Name: pb_Mesh-10964
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -990,7 +922,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-276896
+  m_Name: pb_Mesh-10736
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1155,7 +1087,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36306
+  m_Name: pb_Mesh30198
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1320,7 +1252,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36320
+  m_Name: pb_Mesh187460
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1571,13 +1503,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7986173871030330830, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
   m_PrefabInstance: {fileID: 388596604}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &393622681
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1914460549}
+    m_Modifications:
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.10000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202362373653521868, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_Name
+      value: TopIllusion (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+--- !u!4 &393622682 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+  m_PrefabInstance: {fileID: 393622681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &410438442
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277078
+  m_Name: pb_Mesh-10610
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1869,7 +1869,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277106
+  m_Name: pb_Mesh-10722
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2034,7 +2034,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-276882
+  m_Name: pb_Mesh-10750
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2199,7 +2199,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-276994
+  m_Name: pb_Mesh-10842
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2476,7 +2476,7 @@ GameObject:
   - component: {fileID: 661953818}
   - component: {fileID: 661953817}
   - component: {fileID: 661953822}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle
   m_TagString: Move Controller
   m_Icon: {fileID: 0}
@@ -5298,14 +5298,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4b71d53c2c02e43a301bb1ecea8f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 72461665}
+  movers:
+  - {fileID: 72461665}
 --- !u!43 &703679199
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277008
+  m_Name: pb_Mesh-10870
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -5584,7 +5585,7 @@ GameObject:
   - component: {fileID: 746463605}
   - component: {fileID: 746463604}
   - component: {fileID: 746463609}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RotateController
   m_TagString: Move Controller
   m_Icon: {fileID: 0}
@@ -8408,7 +8409,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4b71d53c2c02e43a301bb1ecea8f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 72461665}
+  movers:
+  - {fileID: 72461665}
+--- !u!1001 &764445552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1336050084}
+    m_Modifications:
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202362373653521868, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_Name
+      value: TopIllusion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+--- !u!4 &764445553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+  m_PrefabInstance: {fileID: 764445552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &782959516 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1223364921694111047, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
@@ -8426,7 +8492,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277064
+  m_Name: pb_Mesh-10678
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8701,7 +8767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: -1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -8720,7 +8786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: 1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -8739,7 +8805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: -1, z: 0}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -8751,7 +8817,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277034
+  m_Name: pb_Mesh-10706
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -9008,7 +9074,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36398
+  m_Name: pb_Mesh187542
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -9325,7 +9391,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36470
+  m_Name: pb_Mesh187618
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -9802,7 +9868,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-276854
+  m_Name: pb_Mesh-10856
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -9976,7 +10042,7 @@ GameObject:
   - component: {fileID: 1254282289}
   - component: {fileID: 1254282288}
   - component: {fileID: 1254282293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle (1)
   m_TagString: Move Controller
   m_Icon: {fileID: 0}
@@ -12798,7 +12864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4b71d53c2c02e43a301bb1ecea8f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 72461665}
+  movers:
+  - {fileID: 72461665}
 --- !u!1 &1336050083
 GameObject:
   m_ObjectHideFlags: 0
@@ -12847,6 +12914,7 @@ Transform:
   - {fileID: 101821207}
   - {fileID: 925503900}
   - {fileID: 7986173871146359180}
+  - {fileID: 764445553}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12951,7 +13019,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-276966
+  m_Name: pb_Mesh-10770
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -13309,7 +13377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: -1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -13328,7 +13396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: 1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -13347,7 +13415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: -1, z: 0}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -13370,7 +13438,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36536
+  m_Name: pb_Mesh30428
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -13649,7 +13717,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-276980
+  m_Name: pb_Mesh-10814
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -13814,7 +13882,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36582
+  m_Name: pb_Mesh30476
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -13979,7 +14047,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-276910
+  m_Name: pb_Mesh-10798
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14144,7 +14212,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-276926
+  m_Name: pb_Mesh-10938
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14321,7 +14389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: -1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes: []
@@ -14339,7 +14407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: 1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes: []
@@ -14357,7 +14425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: -1, z: 0}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes: []
@@ -14368,7 +14436,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277148
+  m_Name: pb_Mesh-10784
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14632,7 +14700,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277182
+  m_Name: pb_Mesh-10572
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14856,7 +14924,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36506
+  m_Name: pb_Mesh30398
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -15021,7 +15089,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277198
+  m_Name: pb_Mesh-10662
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -15180,6 +15248,74 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1853632554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1914460549}
+    m_Modifications:
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.10000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202362373653521868, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+      propertyPath: m_Name
+      value: TopIllusion (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+--- !u!4 &1853632555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3705867058856200811, guid: e7018788c2dd32e459da387253651ae1, type: 3}
+  m_PrefabInstance: {fileID: 1853632554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1883302213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15289,7 +15425,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36372
+  m_Name: pb_Mesh187516
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -15554,7 +15690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: -1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -15573,7 +15709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: 1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -15652,7 +15788,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7986173871030330830, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 393622682}
+    - targetCorrespondingSourceObject: {fileID: 7986173871030330830, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1853632555}
   m_SourcePrefab: {fileID: 100100000, guid: 4a2b2197aece20746a12853817c0d3b3, type: 3}
 --- !u!4 &1914460549 stripped
 Transform:
@@ -15665,7 +15807,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36508
+  m_Name: pb_Mesh30400
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -15888,6 +16030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ida
       objectReference: {fileID: 0}
+    - target: {fileID: 6851796240048946521, guid: a0d3eaf74eef2d34c993ba43071272fc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a0d3eaf74eef2d34c993ba43071272fc, type: 3}
@@ -15909,7 +16055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: -1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -15928,7 +16074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: 1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -15962,7 +16108,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277134
+  m_Name: pb_Mesh-10692
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16127,7 +16273,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-277120
+  m_Name: pb_Mesh-10924
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16396,7 +16542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: -1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:
@@ -16415,7 +16561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathDir: {x: 0, y: 0, z: 1}
-  testDir: {x: 0, y: 0, z: 0}
+  rotateCompensation: {x: 0, y: 0, z: 0}
   isStairs: 0
   walkPointOffset: 1
   connectedCubes:

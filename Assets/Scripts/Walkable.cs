@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 public class Walkable : MonoBehaviour
 {
     public Vector3 pathDir;
-    public Vector3 testDir;
+    public Vector3 rotateCompensation;
 
     [Header("Offsets")]
     public bool isStairs;
@@ -29,7 +29,7 @@ public class Walkable : MonoBehaviour
 
     void Update()
     {
-        testDir = transform.position + transform.rotation * pathDir * walkPointOffset;
+
     }
 
     //To reduce the task of linked all cubes with each other, set is implemented so there is no duplications

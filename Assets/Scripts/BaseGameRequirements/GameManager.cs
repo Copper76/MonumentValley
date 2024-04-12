@@ -14,11 +14,18 @@ public static class GameManager
 
     public static Vector3 GetIdaOrientation()
     {
-        return ida.transform.rotation * ida.transform.up;
+        return Quaternion.Euler(ida.rotateCompensation) * ida.transform.up;
     }
 
     public static void SetIdaMovable(bool canMove)
     {
         ida.canMove = canMove;
+    }
+
+    public static void SetIdaParent(Walkable newCube)
+    {
+        ida.transform.parent = newCube.transform.parent;
+        ida.transform.localRotation = newCube.transform.localRotation;
+        ida.rotateCompensation = newCube.rotateCompensation;
     }
 }
