@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class SlideMover : Movable
 {
-    public Vector3 moveAxis;//Z-Axis needs to be inverse
-    public Vector3 minPos;
-    public Vector3 maxPos;
-    public Vector3[] moveAnchors;
+    [SerializeField] private Vector3 moveAxis;//Z-Axis needs to be inverse
+    [SerializeField] private Vector3 minPos;
+    [SerializeField] private Vector3 maxPos;
+    [SerializeField] private Vector3[] moveAnchors;
     public override void OnStartMove(Vector2 mousePosition)
     {
         base.OnStartMove(mousePosition);
@@ -35,6 +35,7 @@ public class SlideMover : Movable
         {
             return;
         }
+        inUse = false;
         transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
         for (int i=0;i<moveAnchors.Length;i++)
         {

@@ -19,13 +19,18 @@ public static class GameManager
 
     public static void SetIdaMovable(bool canMove)
     {
-        ida.canMove = canMove;
+        ida.SetCanMove(canMove);
+    }
+
+    public static void SetIdaTarget(Walkable target)
+    {
+        ida.SetTarget(target);
     }
 
     public static void SetIdaParent(Walkable newCube)
     {
         ida.transform.parent = newCube.transform.parent;
         ida.transform.localRotation = newCube.transform.localRotation;
-        ida.rotateCompensation = newCube.rotateCompensation;
+        ida.rotateCompensation = newCube.GetRotateCompensation();
     }
 }

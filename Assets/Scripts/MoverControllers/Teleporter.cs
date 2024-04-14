@@ -5,8 +5,8 @@ using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class Teleporter : MonoBehaviour
 {
-    public Walkable attachedWalkable;
-    public Walkable target;
+    [SerializeField] private Walkable attachedWalkable;
+    [SerializeField] private Walkable target;
 
     private void OnTriggerStay(Collider other)
     {
@@ -18,8 +18,7 @@ public class Teleporter : MonoBehaviour
                 other.transform.position = target.GetWalkPoint();
                 other.transform.parent = target.transform;
                 other.transform.localRotation = Quaternion.identity;
-                other.GetComponent<PlayerController>().targetCube = target;
-                
+                GameManager.SetIdaTarget(target);
             }
         }
     }

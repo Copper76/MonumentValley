@@ -4,21 +4,22 @@ using UnityEngine;
 
 public abstract class Movable : MonoBehaviour
 {
-    public bool idaOnTile = false;
-    public bool canMoveWithIda;
+    [SerializeField] protected bool idaOnTile = false;
+    [SerializeField] protected bool canMoveWithIda;
 
-    public Vector2 mousePos;
+    protected Vector2 mousePos;
+    protected bool inUse;
 
-    public int[] anchorWalkableStarts;
-    public int[] anchorWalkableEnds;
-    public Walkable[] anchorWalkables;
-    public int anchorPoint = 0;
+    [SerializeField] protected int[] anchorWalkableStarts;
+    [SerializeField] protected int[] anchorWalkableEnds;
+    [SerializeField] protected Walkable[] anchorWalkables;
+    protected int anchorPoint = 0;
 
     void Start()
     {
         foreach (WalkableContainer walkableContainer in transform.GetComponentsInChildren<WalkableContainer>())
         {
-            walkableContainer.mover = this;
+            walkableContainer.SetMover(this);
         }
         CalculateArrayEnds();
     }
@@ -26,6 +27,26 @@ public abstract class Movable : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public bool isInUse()
+    {
+        return inUse;
+    }
+
+    public void SetIdaOnTile(bool onTile)
+    {
+        idaOnTile = onTile;
+    }
+
+    public void SetAnchorWalkables(Walkable[] newWalkables)
+    {
+        anchorWalkables = newWalkables;
+    }
+
+    public void SetAnchorStarts(int[] newStarts)
+    {
+        anchorWalkableStarts = newStarts;
     }
 
     public void CalculateArrayEnds()
@@ -61,6 +82,7 @@ public abstract class Movable : MonoBehaviour
         {
             return;
         }
+        inUse = true;
         mousePos = mousePosition;
 
         BreakConnections();
@@ -74,11 +96,12 @@ public abstract class Movable : MonoBehaviour
         {
             return;
         }
+        inUse = false;
 
         MakeConnections();
     }
 
-    protected bool CanNotMove()
+    public bool CanNotMove()
     {
         return idaOnTile && !canMoveWithIda;
     }

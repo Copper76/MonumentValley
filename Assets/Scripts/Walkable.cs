@@ -8,17 +8,17 @@ using UnityEngine.UIElements;
 
 public class Walkable : MonoBehaviour
 {
-    public Vector3 pathDir;
-    public Vector3 rotateCompensation;
+    [SerializeField] private Vector3 pathDir;
+    [SerializeField] private Vector3 rotateCompensation;
 
     [Header("Offsets")]
-    public bool isStairs;
-    public float walkPointOffset = 1.0f;
+    [SerializeField] private bool isStairs;
+    [SerializeField] private float walkPointOffset = 1.0f;
 
     [Header("Paths")]
-    public List<Walkable> connectedCubes;
+    [SerializeField] private List<Walkable> connectedCubes;
 
-    public Walkable previousCube;
+    private Walkable previousCube;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,7 +32,6 @@ public class Walkable : MonoBehaviour
 
     }
 
-    //To reduce the task of linked all cubes with each other, set is implemented so there is no duplications
     private void FillConnectedCubes()
     {
         foreach (Walkable cube in connectedCubes)
@@ -59,6 +58,31 @@ public class Walkable : MonoBehaviour
         return connectedCubes.Contains(cube);
     }
 
+    public List<Walkable> GetConnectedCubes() 
+    { 
+        return connectedCubes; 
+    }
+
+    public Vector3 GetPathDir()
+    {
+        return pathDir;
+    }
+
+    public Vector3 GetRotateCompensation()
+    {
+        return rotateCompensation;
+    }
+
+    public Walkable GetPreviousCube()
+    {
+        return previousCube;
+    }
+
+    public void SetPreviousCube(Walkable cube)
+    {
+        previousCube = cube;
+    }
+
     public Vector3 GetWalkPoint()
     {
         return transform.position + transform.rotation * pathDir * walkPointOffset;
@@ -77,11 +101,5 @@ public class Walkable : MonoBehaviour
             Gizmos.color = Color.green;
             Gizmos.DrawLine(GetWalkPoint(), path.GetWalkPoint());
         }
-        /**
-        foreach (Vector3Int vec in testLineTrace)
-        {
-            Gizmos.DrawLine(transform.position, transform.position + vec);
-        }
-        **/
     }
 }

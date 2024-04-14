@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PressurePadController : MonoBehaviour
 {
-    public Walkable attachedWalkable;
-    public MovableController[] moverControllers;
+    [SerializeField] private Walkable attachedWalkable;
+    [SerializeField] private MovableController[] moverControllers;
 
-    public bool inUse = false;
-    public bool isSingleUse;
-    public Material usedMaterial;
+    [SerializeField] private bool isOneWay = false;
+    [SerializeField] private bool isSingleUse;
+    [SerializeField] private Material usedMaterial;
+
+    private bool inUse = false;
 
     private void OnTriggerStay(Collider other)
     {
@@ -34,7 +36,10 @@ public class PressurePadController : MonoBehaviour
         {
             controller.Activate();
         }
-        inUse = true;
+        if (!isOneWay)
+        {
+            inUse = true;
+        }
         if (isSingleUse)
         {
             if (transform.childCount>0)
@@ -48,10 +53,13 @@ public class PressurePadController : MonoBehaviour
 
     private void Release()
     {
-        foreach(var controller in moverControllers)
+        if (!isOneWay)
         {
-            controller.Deactivate();
+            foreach (var controller in moverControllers)
+            {
+                controller.Deactivate();
+            }
+            inUse = false;
         }
-        inUse = false;
     }
 }

@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnvironmentVMovableController : MovableController
+public class EnvironmentController : MovableController
 {
-    public GameObject movedObject;
+    [SerializeField] private GameObject movedObject;
 
-    public bool blockIda;
+    [SerializeField] private bool blockIda;
 
-    public Vector3 destination;
-    public bool willRotate;
-    public Vector3 destinationRotation;
+    [SerializeField] private Vector3 destination;
+    [SerializeField] private bool willRotate;
+    [SerializeField] private Vector3 destinationRotation;
 
-    public Walkable[] addedWalkables;
-    public Walkable[] removedWalkables;
+    [SerializeField] private Walkable[] addedWalkables;
+    [SerializeField] private Walkable[] removedWalkables;
 
     private Vector3 initialPosition;
     private Vector3 targetPos;
@@ -22,9 +22,9 @@ public class EnvironmentVMovableController : MovableController
     private Vector3 targetRotation;
     private bool isUsing;
 
-    public Movable mover;
-    public Walkable[] newWalkables;
-    public int[] newWalkableStarts;
+    [SerializeField] private Movable mover;
+    [SerializeField] private Walkable[] newWalkables;
+    [SerializeField] private int[] newWalkableStarts;
 
     void Awake()
     {
@@ -65,8 +65,8 @@ public class EnvironmentVMovableController : MovableController
         if (mover != null)
         {
             mover.BreakConnections();
-            mover.anchorWalkableStarts = newWalkableStarts;
-            mover.anchorWalkables = newWalkables;
+            mover.SetAnchorStarts(newWalkableStarts);
+            mover.SetAnchorWalkables(newWalkables);
             mover.CalculateArrayEnds();
         }
 
@@ -99,7 +99,7 @@ public class EnvironmentVMovableController : MovableController
                     addedWalkables[i + 1].AddConnection(addedWalkables[i]);
                 }
 
-                if (mover)
+                if (mover && !mover.isInUse())
                 {
                     mover.MakeConnections();
                 }

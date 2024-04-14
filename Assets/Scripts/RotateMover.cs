@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RotateMover : Movable
 {
-    public Vector3 rotateAxis;//Z-Axis needs to be inverse
-    public Vector3[] moveAnchors;
-    public Vector3 pivot;
+    [SerializeField] private Vector3 rotateAxis;//Z-Axis needs to be inverse
+    [SerializeField] private Vector3[] moveAnchors;
+    private Vector3 pivot;
 
     public override void OnStartMove(Vector2 mousePosition)
     {
@@ -41,7 +41,6 @@ public class RotateMover : Movable
             }
         }
         closestAnchor %= moveAnchors.Length-1;//360 is the same as 0
-        //GameManager.SetIdaOrientation(orientations[closestAnchor]);
         transform.eulerAngles = moveAnchors[closestAnchor];
         anchorPoint = closestAnchor;
         base.OnCompleteMove();

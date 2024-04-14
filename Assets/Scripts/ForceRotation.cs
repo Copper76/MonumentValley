@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ForceRotation : MonoBehaviour
 {
-    public Walkable parent;
+    [SerializeField] private Walkable parent;
     private void OnTriggerEnter(Collider other)
     {
         if ( other.tag == "Ida")

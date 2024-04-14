@@ -8,15 +8,15 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    public string nextLevelName;
-    public Scene nextScene;
-    public AsyncOperation asyncLoad;
+    [SerializeField] private string nextLevelName;
+    private Scene nextScene;
+    private AsyncOperation asyncLoad;
 
-    public Walkable targetCube;
-    public Vector3 targetPos;
+    private Walkable targetCube;
+    private Vector3 targetPos;
 
-    public bool isOnGround;
-    public bool canMove = true;
+    private bool isOnGround;
+    private bool canMove = true;
 
     public Vector3 rotateCompensation = new Vector3();
 
@@ -80,7 +80,10 @@ public class PlayerController : MonoBehaviour
                 }
                 if (mover != null)
                 {
-                    mover.OnStartMove(Input.mousePosition);
+                    if (!mover.OnStartMove(Input.mousePosition))
+                    {
+                        mover = null;
+                    }
                 }
             }
         }
@@ -134,6 +137,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void SetCanMove(bool canMove)
+    {
+        this.canMove = canMove;
+    }
+
+    public void SetTarget(Walkable target)
+    {
+        targetCube = target;
+    }
+
     //Called on tile change and interruption
     private void GetCurrentCube()
     {
@@ -155,18 +168,18 @@ public class PlayerController : MonoBehaviour
                         return;
                     }
 
-                    if (currentCube != null && currentCube.GetComponent<WalkableContainer>().mover != null)
+                    if (currentCube != null && currentCube.GetComponent<WalkableContainer>().GetMover() != null)
                     {
-                        currentCube.GetComponent<WalkableContainer>().mover.idaOnTile = false;
+                        currentCube.GetComponent<WalkableContainer>().GetMover().SetIdaOnTile(false);
                     }
 
                     currentCube = validWalkable;
 
                     //transform.localRotation = currentCube.transform.localRotation;
 
-                    if (currentCube.GetComponent<WalkableContainer>().mover != null)
+                    if (currentCube.GetComponent<WalkableContainer>().GetMover() != null)
                     {
-                        currentCube.GetComponent<WalkableContainer>().mover.idaOnTile = true;
+                        currentCube.GetComponent<WalkableContainer>().GetMover().SetIdaOnTile(true);
                     }
 
                     transform.parent = hit.transform;
@@ -208,12 +221,12 @@ public class PlayerController : MonoBehaviour
             return true;
         }
 
-        foreach(Walkable path in current.connectedCubes)
+        foreach(Walkable path in current.GetConnectedCubes())
         {
             if (!pastCubes.Contains(path))
             {
                 nextCubes.Push(path);
-                path.previousCube = current;
+                path.SetPreviousCube(current);
             }
         }
 
@@ -230,7 +243,7 @@ public class PlayerController : MonoBehaviour
         while (cube != currentCube)
         {
             finalPath.Insert(0, cube);
-            cube = cube.previousCube;
+            cube = cube.GetPreviousCube();
         }
     }
 
